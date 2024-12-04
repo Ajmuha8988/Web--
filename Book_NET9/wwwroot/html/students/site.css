@@ -1,0 +1,61 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@font-face {
+    font-family: 'Pollock2CTT';
+    src: url(../fonts/Pollock2CTT.ttf);
+}
+.Pollock{
+    font-family: Pollock2CTT
+}
+html, body{
+    overflow-x:hidden;
+}
+.Bot {
+    margin-top: 100px
+}
+
+
+@media (max-device-height:700px) {
+    .resize-img {
+        width: 100%; /* ”меньшите ширину до 50% */
+        height: auto; /* јвтоматически сохран€йте пропорции */
+    }
+    html, body{
+        overflow-x: hidden;
+    }
+    .gifka{
+        height: 500px;
+    }
+    .resizeimgmobile {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .c12 {
+        display: list-item !important;
+    }
+    .off-container1lvl {
+        display: initial !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .off-container2lvl {
+        display: initial !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .off-container3lvl {
+        display: none !important;
+        width: 0% !important;
+        height: 0% !important;
+    }
+    
+    
+}

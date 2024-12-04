@@ -1,0 +1,110 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ошибка</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Book_NET9.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body style="background-color: black;" class="wrapgrid Pollock">
+    <header>
+        <nav class="Pollock navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light border-bottom box-shadow mb-3" style="position: fixed; width: 100%; z-index:3">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between" style="margin-top: 10px">
+                    <ul class="navbar-nav flex-grow-1">
+                        <div class="dropdown">
+                            <button class="btn btn btn-outline-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Регистрация
+                            </button>
+                            <ul class="dropdown-menu" style="background-color: black" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#Registration_students" style="color: white" href="#">Студент</a></li>
+                                <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#Registration_teachers" style="color: white" href="#">Преподаватель</a></li>
+                            </ul>
+
+                        </div>
+                        <div style="width: 10px; height: 10px;">
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Вход
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" style="color: black" data-bs-toggle="modal" data-bs-target="#Authorization_students" href="#">Студент</a></li>
+                                <li><a class="dropdown-item" style="color: black" data-bs-toggle="modal" data-bs-target="#Authorization_teachers" href="#">Преподаватель</a></li>
+                            </ul>
+
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <section>
+            <div class="row" style="display:flex; flex-wrap:nowrap;">
+                <div class="Pollock col-7">
+                    <h1 align="left" style="color: white; margin-top: 100px;">Технологии в твоих руках!</h1>
+                    <h2 align="left" style="color: white">Стань мастером кода и создай свои цифровые шедевры.</h2>
+                    <div class="c12" style="display:flex;">
+                        <button type="button" class=" p-2  btn btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Registration_students" style="background-color: white; color: black">
+                            Начать обучение
+                        </button>
+                        <h5 class=" p-2" style="color: white;">или</h5>
+                        <button class="btn btn-dark p-2 " data-bs-toggle="modal" data-bs-target="#Authorization_students" style="border-color: white">
+                            Войти в профиль
+                        </button>
+
+                    </div>
+                </div>
+                <div class="col-5" style="height: 200px; width: 1080px;">
+                    <img class="gifka shadow-white" src="~/img/Gufki.gif" />
+                </div>
+            </div>
+            <div class="row container" style="margin-top: 50px;">
+                <img class="update-shadow" style="border-radius: 25px; border: 0px solid; padding: 0 0 0 0; margin: 0 0 0 0;" src="~/img/1472278_People_Technology_3840x2160.gif" />
+            </div>
+            <div style="height: 100px;">
+            </div>
+            </section>
+        </main>
+    </div>
+    <div class="modal" tabindex="-1" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" style="color:white">Неправильно указан почта или пароль</h5>
+                    
+                </div>
+                <div class="modal-body" style="color:white">
+                    <p>При попытке войти в систему возникла ошибка: неправильно введён почта или пароль.</p>
+                </div>
+                <div class="modal-footer">
+                    <form asp-controller="home" asp-action="Index" method="get">
+                        <button type="submit" class="btn btn-primary" style="color:white" data-bs-dismiss="modal">Закрыть</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+                   $(document).ready(function() {
+          $('#myModal').modal({ backdrop: 'static', keyboard: false }); // Отключаем закрытие при клике за пределами окна и по клавише Esc
+          $('#myModal').modal('show');
+        });
+    </script>
+</body>
+</html>

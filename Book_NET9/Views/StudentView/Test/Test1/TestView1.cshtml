@@ -1,0 +1,197 @@
+﻿@model Book_NET9.Models.Result
+@{
+    var id_student = TempData["ID_Student"];
+    Layout = "";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Структура программного обеспечения</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Book_NET9.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body class="wrapgrid container w-100 bg-light d-flex Pollock">
+    <main>
+        <div class="form-check">
+            <h2>1. Программное обеспечение - это...</h2>
+            <p>
+                <input class="form-check-input" type="radio" name="q1" id="q11" />неотъемлемая часть компьютерной системы. Оно является логическим продолжением технических средств. Сфера применения конкретного компьютера определяется созданным для него программным обеспечением.
+            </p>
+            <p>
+                <input class="form-check-input" type="radio" name="q1" id="q12" />физическая оболочка компьютера, включающая корпус, материнскую плату и другие аппаратные компоненты.
+            </p>
+            <p>
+                <input class="form-check-input" type="radio" name="q1" id="q13" />набор кабелей и проводов, соединяющих различные компоненты компьютера между собой.
+            </p>
+            <h2>2. Программное обеспечение, можно условно разделить на категории:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q21" />Системное ПО.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q22" />Аппаратное ПО.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q23" />Прикладное ПО.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q24" />Виртуальное ПО.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q25" />Инструментальное ПО.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q2" id="q26" />Игровое  ПО.
+            </p>
+            <h2>3. Задачи операционное системы:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q31" /> Управляет внешним видом рабочего стола.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q32" /> Распределяет ресурсы компьютера.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q33" /> Устанавливает программное обеспечение самостоятельно.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q34" /> Планирует использование ресурсов.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q35" /> Синхронизирует файлы с облачным хранилищем.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q3" id="q36" /> Контролирует работу компьютера.
+            </p>
+            <h2>4. Языковые трансляторы реализуются в виде:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q4" id="q41" /> Интерпретатора.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q4" id="q42" /> CSS-препроцесса.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q4" id="q43" /> Системы управления базами данных.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q4" id="q44" /> Компилятора.
+            </p>
+            <h2>5. Утилита предназначена для...</h2>
+            <p>
+                <input class="form-check-input" type="radio" name="q5" id="q51" /> создания веб-сайтов.
+            </p>
+            <p>
+                <input class="form-check-input" type="radio" name="q5" id="q52" /> обслуживания компьютера и периферийных устройств.
+            </p>
+            <p>
+                <input class="form-check-input" type="radio" name="q5" id="q53" /> разработки мобильных приложений.
+            </p>
+            <h2>6. Классификации, в которой основополагающим признаком является сфера (область) использования программных продуктов:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q61"  /> Аппаратная часть автономных компьютеров и сетей ЭВМ.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q62" /> Функциональные задачи различных предметных областей.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q63" /> Технология разработки программ.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q64" /> Уровень образования пользователей.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q65" />  Популярность программного продукта среди пользователей.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q6" id="q66" />   Количество строк кода в программе.
+            </p>
+            <h2>7. Программное обеспечние ЭВМ выделяет классы:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q71" /> Мультимедийные файлы.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q72" /> Игровые консоли.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q73" /> Электронные книги.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q74" /> Cистемное программное обеспечение.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q75" />  Прикладное программное обеспечение.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q7" id="q76" />   Инструментальное программное обеспечение.
+            </p>
+            <h2>8. Какие задачи выполняет системное ПО:</h2>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q81" /> Создание операционной среды функционирования других программ.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q82" /> Обеспечение надежной и эффективной работы самого компьютера и вычислительной сети.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q83" /> Управление мультимедийными файлами.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q84" /> Запуск игровых приложений.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q85" /> Проведение диагностики, локализации сбоев, ошибок и отказов и профилактики аппаратуры компьютера и вычислительных сетей.
+            </p>
+            <p>
+                <input class="form-check-input" type="checkbox" name="q8" id="q86" /> Выполнение вспомогательных технологических процессов (копирование, архивирование, восстановление файлов программ и баз данных и т.д.).
+            </p>
+            <div style="height: 50px">
+            </div>
+            <div class="text-center w-100">
+                <button class="btn btn-dark" style="width: 200px; height: 50px" onclick="calculate()" data-bs-toggle="modal" data-bs-target="#Save_Result">Завершить тестирование</button>
+            </div>
+            <div style="height: 100px">
+
+            </div>
+        </div>
+        <div class="modal fade" id="Save_Result" tabindex="-1" aria-labelledby="Save_Result_Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <form asp-action="SaveResult" asp-controller="StudentView">
+                <div class="modal-content Pollock bg-dark">
+                    <input type="hidden"/>
+                    <input asp-for="Lessons" type="hidden" value="1"/>
+                    <input asp-for="Id_students" type="hidden" value="@id_student">
+                    <input asp-for="count" type="hidden" value="1">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color:white">Ваш результат</h5>
+                    </div>
+                    <div class="modal-body row" style="color:white">
+                        <p class="col-1" id="result"></p>
+                        <p class="col-1">/</p>
+                        <p class="col-10">20</p>
+                    </div>
+                    <div class="modal-body row" style="color:white">
+                        <p class="col-2">Оценка :</p>
+                        <p class="col-10" id="final"></p>
+                        <input asp-for="Final" type="hidden" id="Final"/>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" style="color:black" onclick="reloadPage()" data-bs-dismiss="modal">Перезапустить</button>
+                        <button type="submit" class="btn btn-primary" style="color:white" data-bs-dismiss="modal">Сохранить результат</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/Test1.js"></script>
+    <script>
+                   $(document).ready(function() {
+          $('#Save_Result').modal({ backdrop: 'static', keyboard: false }); // Отключаем закрытие при клике за пределами окна и по клавише Esc
+        });
+    </script>
+</body>
+</html>

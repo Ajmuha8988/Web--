@@ -1,0 +1,115 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+@font-face {
+    font-family: 'Pollock2CTT';
+    src: url(../fonts/Pollock2CTT.ttf);
+}
+.Pollock{
+    font-family: Pollock2CTT
+}
+html, body{
+    overflow-x:hidden;
+}
+.Bot {
+    margin-top: 100px
+}
+
+
+@media (max-device-height:700px) {
+    .wrapper{
+        width: 100%;
+        overflow-x: hidden
+    }
+    .resize-img {
+        width: 10%; /* ”меньшите ширину до 50% */
+        height: auto; /* јвтоматически сохран€йте пропорции */
+    }
+    html, body{
+        overflow-x: hidden;
+    }
+    .gifka{
+        height: 500px;
+    }
+    .resizeimgmobile {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .c12 {
+        display: list-item !important;
+    }
+    .off-container1lvl {
+        display: initial !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .off-container2lvl {
+        display: initial !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .off-container3lvl {
+        display: none !important;
+        width: 0% !important;
+        height: 0% !important;
+    }
+    
+    
+}
+.shadow-white {
+    border: 0px solid;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    box-shadow: -10px 10px 10px -9px #FFFFFF;
+}
+.update-shadow {
+    width: 100%;
+    margin: 0em auto;
+    padding: 1em;
+    box-shadow: 0 0 10px 5px rgba(255,255,255)
+    ;
+}
+input[type=text].inputB::placeholder {
+    color: black;
+}
+input[type=email].inputB::placeholder {
+    color: black;
+}
+input[type=tel].inputB::placeholder {
+    color: black;
+}
+input[type=password].inputB::placeholder {
+    color: black;
+}
+input[type=password].inputW::placeholder {
+    color: white;
+}
+input[type=email].inputW::placeholder {
+    color: white;
+}
+.containerstudent {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+button[type=button].butGray:hover {
+    background-color: #e5e4e2;
+}

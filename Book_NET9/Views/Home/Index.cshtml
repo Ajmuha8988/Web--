@@ -1,0 +1,120 @@
+﻿@model Book_NET9.ViewModels.RegistrationViewModel
+@{
+    ViewData["Title"] = "Учебное пособие";
+}
+<section>
+    <div class="row" style="display:flex; flex-wrap:nowrap;">
+        <div class="Pollock col-7">
+            <h1 align="left" style="color: white; margin-top: 100px;">Технологии в твоих руках!</h1>
+            <h2 align="left" style="color: white">Стань мастером кода и создай свои цифровые шедевры.</h2>
+            <div class="c12" style="display:flex;">
+                <button type="button" class=" p-2  btn btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#Registration_students" style="background-color: white; color: black">
+                    Начать обучение
+                </button>
+                <h5 class=" p-2" style="color: white;">или</h5>
+                <button class="btn btn-dark p-2 " data-bs-toggle="modal" data-bs-target="#Authorization_students"  style="border-color: white">
+                    Войти в профиль
+                </button>
+                
+            </div>
+        </div>
+        <div class="col-5" style="height: 200px; width: 1080px;">
+            <img class="gifka shadow-white" src="~/img/Gufki.gif" />
+        </div>
+    </div>
+    <div class="row container" style="margin-top: 50px;">
+        <img class="update-shadow" style="border-radius: 25px; border: 0px solid; padding: 0 0 0 0; margin: 0 0 0 0;" src="~/img/1472278_People_Technology_3840x2160.gif" />
+    </div>
+    <div style="height: 100px;">
+        
+    </div>
+    <div class="modal fade" id="Registration_students" tabindex="-1" aria-labelledby="Registration_students_Label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content Pollock">
+                <div class="row">
+                    <button type="button" style="margin-right: 5px; margin-top: 5px" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body" style="margin-top: 25px" >
+                        <form asp-action="Registration" asp-controller="home" oninput='StudentPasswordConfirm.setCustomValidity(StudentPasswordConfirm.value != StudentPassword.value ? "Пароли не совпадают" : "")'>
+                            <h3 class="text-center" id="Registration_students_Label">Добро пожаловать, студент!</h3>
+                            <input type="hidden" />
+                            <input type="text" asp-for="students.Lastname" class="form-control w-75 inputB" placeholder="Фамилия" style="margin-left: 60px; margin-top: 30px; background-color:#cccccc; border-width: 3px; border-color: black" required>
+                            <input type="text" asp-for="students.Firstname" class="form-control w-75 inputB" placeholder="Имя" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentFirstName" required />
+                            <input type="text" asp-for="students.Patronymic" class="form-control w-75 inputB" placeholder="Отчество" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentPatronymic" required />
+                            <input type="email" asp-for="students.Email" class="form-control w-75 inputB" placeholder="Почта" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentEmail" required />
+                            <input type="tel" asp-for="students.Phone" class="form-control w-75 inputB" placeholder="Номер телефона" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentCall" required />
+                            <input type="password" asp-for="students.Password" class="form-control w-75 inputB" placeholder="Пароль" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentPassword" required />
+                            <input type="password" asp-for="students.PasswordConfirm" class="form-control w-75 inputB" placeholder="Подтвердите пароль" style="margin-left: 60px; margin-top: 15px; background-color:#cccccc; border-width: 3px; border-color: black" id="StudentPasswordConfirm" required />
+                            <button type="submit" style="margin-left: 60px; margin-top: 15px" class="btn btn-primary w-75">Зарегистрироваться</button>
+                            <div style="height: 25px"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<div class="modal fade" id="Registration_teachers" tabindex="-1" aria-labelledby="Registration_teachers_Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content Pollock">
+            <div class="row">
+                <button type="button" style="margin-right: 5px; margin-top: 5px" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body" style="margin-top: 25px">
+                    <form asp-action="Registration" asp-controller="home" oninput='TeacherPasswordConfirm.setCustomValidity(TeacherPasswordConfirm.value != TeacherPassword.value ? "Пароли не совпадают" : "")'>
+                      @Html.AntiForgeryToken()
+                        <h3 class="text-center" id="Registration_teachers">Добро пожаловать, наставник!</h3>
+                        <input type="hidden" />
+                        <input type="text" asp-for="teachers.Lastname" class="form-control w-75 inputB" placeholder="Фамилия" style="color: black;margin-left: 60px; margin-top: 30px; background-color:#cccccc; border-width: 3px; border-color: black" required>
+                        <input type="text" asp-for="teachers.Firstname" class="form-control w-75 inputB" placeholder="Имя" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherFirstName" required />
+                        <input type="text" asp-for="teachers.Patronymic" class="form-control w-75 inputB" placeholder="Отчество" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherPatronymic" required />
+                        <input type="email" asp-for="teachers.Email" class="form-control w-75 inputB" placeholder="Почта" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherEmail" required />
+                        <input type="tel" asp-for="teachers.Phone" class="form-control w-75 inputB" placeholder="Номер телефона" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherCall" required />
+                        <input type="password" asp-for="teachers.Password" class="form-control w-75 inputB" placeholder="Пароль" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherPassword" required />
+                        <input type="password" asp-for="teachers.PasswordConfirm" class="form-control w-75 inputB" placeholder="Подтвердите пароль" style="margin-left: 60px; margin-top: 15px;background-color:#cccccc; border-width: 3px; border-color: black" id="TeacherPasswordConfirm" required />
+                        <button type="submit" style="margin-left: 60px; margin-top: 15px" class="btn btn-primary w-75">Зарегистрироваться</button>
+                        <div style="height: 25px"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="modal fade" id="Authorization_students" tabindex="-1" aria-labelledby="Authorization_students_Label" aria-hidden="true">
+    <div class="modal-dialog" >
+        <div class="modal-content Pollock" style="background-color: black">
+            <div class="row">
+                <button type="button" style="margin-right: 5px; margin-top: 5px" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body" style="margin-top: 25px">
+                    <form asp-action="LoginStudent" asp-controller="home" oninput='StudentsPasswordConfirm.setCustomValidity(StudentsPasswordConfirm.value != StudentsPassword.value ? "Пароли не совпадают" : "")'>
+                        @Html.AntiForgeryToken()
+                        <h3 class="text-center" style="color:white" id="Registration_Students">C возвращением, студент!</h3>
+                        <input type="hidden" />
+                        <input type="email" asp-for="students.Email" class="form-control w-75 inputW" placeholder="Почта" style="margin-left: 60px; margin-top: 15px; background-color:black; border-width: 3px; border-color: white; color: white" id="StudentsEmail" required />
+                        <input type="password" asp-for="students.Password" class="form-control w-75 inputW" placeholder="Пароль" style="margin-left: 60px; margin-top: 15px; background-color:black; border-width: 3px; border-color: white; color: white" id="StudentsPassword" required />
+                        <div class="alert alert-danger mt-3" id="errorMessage" style="display:none;"></div>
+                        <button type="submit" style="margin-left: 60px; margin-top: 15px" class="btn btn-primary w-75">Войти</button>
+                        <div style="height: 25px"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+<div class="modal fade" id="Authorization_teachers" tabindex="-1" aria-labelledby="Authorization_teachers_Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content Pollock" style="background-color: black">
+            <div class="row">
+                <button type="button" style="margin-right: 5px; margin-top: 5px" class="btn-close position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body" style="margin-top: 25px">
+                    <form asp-action="LoginTeacher" asp-controller="home" oninput='StudentsPasswordConfirm.setCustomValidity(StudentsPasswordConfirm.value != StudentsPassword.value ? "Пароли не совпадают" : "")'>
+                        <h3 class="text-center" style="color:white" id="Registration_Students">C возвращением, наставник!</h3>
+                        <input type="hidden" />
+                        <input type="email" asp-for="teachers.Email" class="form-control w-75 inputW" placeholder="Почта" style="margin-left: 60px; margin-top: 15px; background-color:black; border-width: 3px; border-color: white; color: white" id="StudentsEmail" />
+                        <input type="password" asp-for="teachers.Password" class="form-control w-75 inputW" placeholder="Пароль" style="margin-left: 60px; margin-top: 15px; background-color:black; border-width: 3px; border-color: white; color: white" id="StudentsPassword" />
+                        <button type="submit" style="margin-left: 60px; margin-top: 15px" class="btn btn-primary w-75">Войти</button>
+                        <div style="height: 25px"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
